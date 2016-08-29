@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.vvg.java.vjezbe.controller.GlavnaController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Knjige">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#prikaziKnjige" text="Pretraži knjige" />
+                  <MenuItem mnemonicParsing="false" onAction="#dodajKnjige" text="Dodaj knjige" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Časopisi">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#prikaziCasopise" text="Pretraži časopise" />
+                  <MenuItem mnemonicParsing="false" onAction="#dodajCasopis" text="Dodaj časopis" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Članovi">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#prikaziClanove" text="Pretraži članove" />
+                  <MenuItem mnemonicParsing="false" onAction="#dodajClana" text="Dodaj članove" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Posudba">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#prikaziPosudbuKnjiga" text="Posudba knjige" />
+                  <MenuItem mnemonicParsing="false" onAction="#prikaziPosudbuCasopisa" text="Posudba časopisa" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Datum i vrijeme:" />
+            <Label fx:id="labelaDatum" layoutX="10.0" layoutY="10.0" />
+            <Label layoutX="38.0" layoutY="10.0" text="|Posuđeni časopisi:" />
+            <Label fx:id="labelaCasopis" layoutX="66.0" layoutY="10.0" />
+            <Label layoutX="94.0" layoutY="10.0" text="|Posuđene knjige:" />
+            <Label fx:id="labelaKnjiga" layoutX="122.0" layoutY="10.0" />
+         </children></HBox>
+   </bottom>
+</BorderPane>
